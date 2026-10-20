@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { NICHE_PROJECTS, NicheProject } from '../data/landingData.ts';
+import { getAssetPath } from '../utils/assetPath.ts';
 
 interface ShowcaseCarouselProps {
   onSelectProject: (project: NicheProject) => void;
@@ -110,7 +111,7 @@ export const ShowcaseCarousel: React.FC<ShowcaseCarouselProps> = ({
               {/* Reference Image with hover elevation */}
               <div className="relative overflow-visible">
                 <img
-                  src={project.image}
+                  src={getAssetPath(project.image)}
                   alt={`${project.tag} - ${project.headline}`}
                   className="w-full aspect-[360/480] rounded-2xl shadow-sm object-cover transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2.5"
                 />

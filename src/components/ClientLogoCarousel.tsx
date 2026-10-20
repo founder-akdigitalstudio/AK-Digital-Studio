@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetPath } from '../utils/assetPath.ts';
 
 export interface ClientLogo {
   id: string;
@@ -137,7 +138,7 @@ export const ClientLogoCarousel: React.FC = () => {
                   }`}
                 >
                   <img
-                    src={client.image}
+                    src={getAssetPath(client.image)}
                     alt={`${client.name} logo`}
                     className={`max-h-10 max-w-[124px] object-contain transition-all duration-200 ${
                       client.id === 'tcs' || client.id === 'dropout' ? 'rounded-xs' : ''

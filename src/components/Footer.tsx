@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '../utils/assetPath.ts';
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -13,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
               <img
-                src="/assets/aistudio/AK_Digita_Studio_Logo_73d88755.png"
+                src={getAssetPath('assets/aistudio/AK_Digita_Studio_Logo_73d88755.png')}
                 alt="AK Digital Studio Logo"
                 className="w-7 h-7 rounded-md object-contain"
               />

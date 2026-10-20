@@ -2,6 +2,7 @@ import React from 'react';
 import { X, ArrowRight, CheckCircle2, TrendingUp, Layers } from 'lucide-react';
 import { NicheProject } from '../data/landingData.ts';
 import { MockupRenderer } from './NicheMockups.tsx';
+import { getAssetPath } from '../utils/assetPath.ts';
 
 interface NicheDetailModalProps {
   project: NicheProject | null;
@@ -57,7 +58,7 @@ export const NicheDetailModal: React.FC<NicheDetailModalProps> = ({
             {/* Visual Screen Mockup */}
             <div className="h-64 md:h-full min-h-[260px] rounded-xl overflow-hidden shadow-sm border border-slate-200">
               <img
-                src={project.image}
+                src={getAssetPath(project.image)}
                 alt={project.headline}
                 className="w-full h-full object-cover"
               />

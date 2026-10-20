@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { getAssetPath } from '../utils/assetPath.ts';
 
 interface NavbarProps {
   onOpenBooking: () => void;
@@ -35,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           className="flex items-center gap-2.5 text-slate-900 group"
         >
           <img
-            src="/assets/aistudio/AK_Digita_Studio_Logo_73d88755.png"
+            src={getAssetPath('assets/aistudio/AK_Digita_Studio_Logo_73d88755.png')}
             alt="AK Digital Studio Logo"
             className="w-8 h-8 rounded-lg object-contain shadow-2xs group-hover:scale-105 transition-transform"
           />
